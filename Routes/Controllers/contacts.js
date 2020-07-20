@@ -1,9 +1,11 @@
 const contacts = require('../data/contacts')
 
+//list
 const list = (req, res) => {
   res.json(contacts)
 }
 
+//show
 const show = (req, res) => {
   const contact = contacts.find(function(item) {
     return item._id == req.params.id
@@ -11,6 +13,8 @@ const show = (req, res) => {
   res.json(contact)
 }
 
+
+//create
 const create = (req, res) => {
   const newContact = {
     _id: contacts.length +1,
