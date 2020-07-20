@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+
 const products = require('./routers/products')
 const vehicles = require("./routers/vehicles")
 const comments = require("./routers/comments")
@@ -9,6 +10,7 @@ const bodyParser = require('body-parser')
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
+//folder contents
 app.use(products)
 app.use(comments)
 app.use(vehicles)
